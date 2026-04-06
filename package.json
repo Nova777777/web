@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@cloudflare/next-on-pages": "^1.13.16",
     "autoprefixer": "^10.4.19",
     "dayjs": "^1.11.10",
     "lucide-react": "^0.344.0",

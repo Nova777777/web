@@ -1,14 +1,15 @@
 name = "cloudtools-api"
-type = "javascript"
 workers_dev = true
-compatibility_date = "2024-01-01"
+compatibility_date = "2026-04-01"
+compatibility_flags = ["nodejs_compat"]
+main = "index.js"
 
 [[d1_databases]]
 binding = "DB"
 database_name = "cloudtools-db"
-database_id = "YOUR_DATABASE_ID"
+database_id = "dab6dfc3-afa9-45a1-804a-bc88826b2216"
 
 [[kv_namespaces]]
 binding = "KV"
-id = "YOUR_KV_NAMESPACE_ID"
-preview_id = "YOUR_KV_NAMESPACE_ID"
+id = "e772c86938114c23a7badd865fe299a8"
+preview_id = "e772c86938114c23a7badd865fe299a8"

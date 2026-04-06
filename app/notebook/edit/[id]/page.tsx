@@ -36,7 +36,7 @@ export default function NoteEditPage() {
   const fetchNote = async () => {
     try {
       setLoading(true)
-      const response = await fetch(`http://localhost:8787/api/notes/${id}`)
+      const response = await fetch(`https://cloudtools-api.493024082.workers.dev/api/notes/${id}`)
       const data = await response.json()
       setFormData({
         title: data.title,
@@ -65,7 +65,7 @@ export default function NoteEditPage() {
 
     try {
       setSaving(true)
-      const response = await fetch(`http://localhost:8787/api/notes/${id}`, {
+      const response = await fetch(`https://cloudtools-api.493024082.workers.dev/api/notes/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'

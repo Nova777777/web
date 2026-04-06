@@ -27,6 +27,11 @@ export default function BlogPage() {
   const fetchBlogs = async () => {
     try {
       setLoading(true)
+      const response = await fetch('https://cloudtools-api.493024082.workers.dev/api/blogs')
+      const data = await response.json()
+      setBlogs(data)
+    } catch (error) {
+      console.error('获取博客失败:', error)
       // 模拟数据，用于本地测试
       const mockData = [
         {
@@ -49,8 +54,6 @@ export default function BlogPage() {
         }
       ]
       setBlogs(mockData)
-    } catch (error) {
-      console.error('获取博客失败:', error)
     } finally {
       setLoading(false)
     }

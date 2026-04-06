@@ -28,6 +28,11 @@ export default function BlogDetailPage() {
   const fetchBlog = async () => {
     try {
       setLoading(true)
+      const response = await fetch(`https://cloudtools-api.493024082.workers.dev/api/blogs/${id}`)
+      const data = await response.json()
+      setBlog(data)
+    } catch (error) {
+      console.error('获取博客详情失败:', error)
       // 模拟数据，用于本地测试
       const mockData = {
         1: {
@@ -50,8 +55,6 @@ export default function BlogDetailPage() {
         }
       }
       setBlog(mockData[id as unknown as keyof typeof mockData] || null)
-    } catch (error) {
-      console.error('获取博客详情失败:', error)
     } finally {
       setLoading(false)
     }

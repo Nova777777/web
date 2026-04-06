@@ -27,6 +27,11 @@ export default function NoteDetailPage() {
   const fetchNote = async () => {
     try {
       setLoading(true)
+      const response = await fetch(`https://cloudtools-api.493024082.workers.dev/api/notes/${id}`)
+      const data = await response.json()
+      setNote(data)
+    } catch (error) {
+      console.error('获取笔记详情失败:', error)
       // 模拟数据，用于本地测试
       const mockData = {
         1: {
@@ -55,8 +60,6 @@ export default function NoteDetailPage() {
         }
       }
       setNote(mockData[id as unknown as keyof typeof mockData] || null)
-    } catch (error) {
-      console.error('获取笔记详情失败:', error)
     } finally {
       setLoading(false)
     }

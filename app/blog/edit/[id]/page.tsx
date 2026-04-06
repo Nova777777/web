@@ -38,7 +38,7 @@ export default function BlogEditPage() {
   const fetchBlog = async () => {
     try {
       setLoading(true)
-      const response = await fetch(`http://localhost:8787/api/blogs/${id}`)
+      const response = await fetch(`https://cloudtools-api.493024082.workers.dev/api/blogs/${id}`)
       const data = await response.json()
       setFormData({
         title: data.title,
@@ -68,7 +68,7 @@ export default function BlogEditPage() {
 
     try {
       setSaving(true)
-      const response = await fetch(`http://localhost:8787/api/blogs/${id}`, {
+      const response = await fetch(`https://cloudtools-api.493024082.workers.dev/api/blogs/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
