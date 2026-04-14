@@ -24,7 +24,7 @@ jobs:
         run: npm install
 
       - name: Build project
-        run: npm run build
+        run: npx @cloudflare/next-on-pages@1
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
@@ -32,5 +32,5 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: cloudflare-multifunction-app
-          directory: dist
+          directory: .vercel/output/static
           branch: main

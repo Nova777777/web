@@ -40,12 +40,13 @@ router.get('/api/blogs', async (request, env) => {
   try {
     await initDatabase(env.DB)
     const { results } = await env.DB.prepare('SELECT * FROM blogs ORDER BY created_at DESC').all()
-    return new Response(JSON.stringify(results), {
+    return new Response(JSON.stringify(results || []), {
       headers: { 'Content-Type': 'application/json' }
     })
   } catch (error) {
-    return new Response(JSON.stringify({ error: error.message }), {
-      status: 500,
+    console.error('获取博客列表失败:', error)
+    return new Response(JSON.stringify([]), {
+      status: 200,
       headers: { 'Content-Type': 'application/json' }
     })
   }
@@ -166,12 +167,13 @@ router.get('/api/notes', async (request, env) => {
   try {
     await initDatabase(env.DB)
     const { results } = await env.DB.prepare('SELECT * FROM notes ORDER BY updated_at DESC').all()
-    return new Response(JSON.stringify(results), {
+    return new Response(JSON.stringify(results || []), {
       headers: { 'Content-Type': 'application/json' }
     })
   } catch (error) {
-    return new Response(JSON.stringify({ error: error.message }), {
-      status: 500,
+    console.error('获取笔记列表失败:', error)
+    return new Response(JSON.stringify([]), {
+      status: 200,
       headers: { 'Content-Type': 'application/json' }
     })
   }
