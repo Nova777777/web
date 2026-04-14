@@ -26,7 +26,7 @@ export default function NotebookPage() {
   const fetchNotes = async () => {
     try {
       setLoading(true)
-      const response = await fetch('https://cloudtools-api.493024082.workers.dev/api/notes')
+      const response = await fetch('/api/notes')
       const data = await response.json()
       setNotes(data)
     } catch (error) {

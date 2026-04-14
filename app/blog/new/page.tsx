@@ -32,7 +32,7 @@ export default function BlogNewPage() {
 
     try {
       setLoading(true)
-      const response = await fetch('https://cloudtools-api.493024082.workers.dev/api/blogs', {
+      const response = await fetch('/api/blogs', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

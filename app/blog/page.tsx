@@ -27,7 +27,7 @@ export default function BlogPage() {
   const fetchBlogs = async () => {
     try {
       setLoading(true)
-      const response = await fetch('https://cloudtools-api.493024082.workers.dev/api/blogs')
+      const response = await fetch('/api/blogs')
       const data = await response.json()
       setBlogs(data)
     } catch (error) {
