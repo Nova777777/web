@@ -1,0 +1,15 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/blog/page": "/blog",
+  "/horoscope/page": "/horoscope",
+  "/blog/new/page": "/blog/new",
+  "/mbti/page": "/mbti",
+  "/notebook/page": "/notebook",
+  "/tools/page": "/tools",
+  "/notebook/new/page": "/notebook/new",
+  "/page": "/",
+  "/blog/[id]/page": "/blog/[id]",
+  "/notebook/[id]/page": "/notebook/[id]",
+  "/notebook/edit/[id]/page": "/notebook/edit/[id]",
+  "/blog/edit/[id]/page": "/blog/edit/[id]"
+}

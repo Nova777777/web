@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "functions": {
+    "/blog/edit/[id]": {},
+    "/blog/[id]": {},
+    "/notebook/edit/[id]": {},
+    "/notebook/[id]": {}
+  }
+}

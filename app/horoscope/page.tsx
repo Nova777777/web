@@ -4,6 +4,11 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Calendar, Star, Sun, Moon } from 'lucide-react'
 import dayjs from 'dayjs'
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
+import { Pie } from 'react-chartjs-2'
+
+// 注册Chart.js组件
+ChartJS.register(ArcElement, Tooltip, Legend)
 
 // 星座数据
 const zodiacs = [
@@ -186,6 +191,21 @@ const getRulerIcon = (ruler: string) => {
   }
 }
 
+// 生成星座特征图表数据
+const generateZodiacChartData = (zodiac: any) => {
+  return {
+    labels: ['优势', '待提升'],
+    datasets: [
+      {
+        data: [zodiac.strengths.length, zodiac.weaknesses.length],
+        backgroundColor: ['#4f46e5', '#ef4444'],
+        borderColor: ['#4f46e5', '#ef4444'],
+        borderWidth: 1,
+      },
+    ],
+  }
+}
+
 export default function HoroscopeTest() {
   const [birthDate, setBirthDate] = useState('')
   const [zodiac, setZodiac] = useState<any>(null)
@@ -290,22 +310,46 @@ export default function HoroscopeTest() {
                   <p className="text-gray-700 dark:text-gray-300">{zodiac?.personality}</p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
                   <div>
-                    <h4 className="text-lg font-semibold mb-2">优势</h4>
-                    <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
-                      {zodiac?.strengths.map((strength: string, index: number) => (
-                        <li key={index}>{strength}</li>
-                      ))}
-                    </ul>
+                    <h4 className="text-lg font-semibold mb-4">性格特征</h4>
+                    <div className="space-y-4">
+                      <div>
+                        <h5 className="font-medium text-primary mb-2">优势</h5>
+                        <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
+                          {zodiac?.strengths.map((strength: string, index: number) => (
+                            <li key={index}>{strength}</li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div>
+                        <h5 className="font-medium text-red-500 mb-2">待提升</h5>
+                        <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
+                          {zodiac?.weaknesses.map((weakness: string, index: number) => (
+                            <li key={index}>{weakness}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold mb-2">待提升</h4>
-                    <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
-                      {zodiac?.weaknesses.map((weakness: string, index: number) => (
-                        <li key={index}>{weakness}</li>
-                      ))}
-                    </ul>
+                    <h4 className="text-lg font-semibold mb-4">特征分析</h4>
+                    {zodiac && (
+                      <div className="h-64">
+                        <Pie 
+                          data={generateZodiacChartData(zodiac)} 
+                          options={{
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                              legend: {
+                                position: 'bottom' as const,
+                              },
+                            },
+                          }}
+                        />
+                      </div>
+                    )}
                   </div>
                 </div>
 

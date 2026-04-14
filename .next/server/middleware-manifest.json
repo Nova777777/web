@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "middleware": {},
+  "functions": {
+    "/blog/[id]/page": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/blog/[id]/page_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/edge-chunks/273.js",
+        "server/app/blog/[id]/page.js"
+      ],
+      "name": "app/blog/[id]/page",
+      "page": "/blog/[id]/page",
+      "matchers": [
+        {
+          "regexp": "^/blog/(?<id>[^/]+?)$",
+          "originalSource": "/blog/[id]"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "env": {
+        "__NEXT_BUILD_ID": "VunCKU_RFv0Xye3qAaThh",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "yOkb+AKoINzZqI4Dfl3wB3/Bf+tfwQBdsCxLZyi9KgY=",
+        "__NEXT_PREVIEW_MODE_ID": "7d968fab7aac3303c0b4b3cce8b1059b",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "3b018f2937c1c126deb982b1ea8e9ec20a0d76f3f92192fd68a0584e0de66076",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "3beb42300ea61541a391c4669c6e17267b89badd492548326a7e15e510edca70"
+      }
+    },
+    "/notebook/[id]/page": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/notebook/[id]/page_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/edge-chunks/273.js",
+        "server/app/notebook/[id]/page.js"
+      ],
+      "name": "app/notebook/[id]/page",
+      "page": "/notebook/[id]/page",
+      "matchers": [
+        {
+          "regexp": "^/notebook/(?<id>[^/]+?)$",
+          "originalSource": "/notebook/[id]"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "env": {
+        "__NEXT_BUILD_ID": "VunCKU_RFv0Xye3qAaThh",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "yOkb+AKoINzZqI4Dfl3wB3/Bf+tfwQBdsCxLZyi9KgY=",
+        "__NEXT_PREVIEW_MODE_ID": "7d968fab7aac3303c0b4b3cce8b1059b",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "3b018f2937c1c126deb982b1ea8e9ec20a0d76f3f92192fd68a0584e0de66076",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "3beb42300ea61541a391c4669c6e17267b89badd492548326a7e15e510edca70"
+      }
+    },
+    "/notebook/edit/[id]/page": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/notebook/edit/[id]/page_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/edge-chunks/273.js",
+        "server/edge-chunks/623.js",
+        "server/app/notebook/edit/[id]/page.js"
+      ],
+      "name": "app/notebook/edit/[id]/page",
+      "page": "/notebook/edit/[id]/page",
+      "matchers": [
+        {
+          "regexp": "^/notebook/edit/(?<id>[^/]+?)$",
+          "originalSource": "/notebook/edit/[id]"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "env": {
+        "__NEXT_BUILD_ID": "VunCKU_RFv0Xye3qAaThh",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "yOkb+AKoINzZqI4Dfl3wB3/Bf+tfwQBdsCxLZyi9KgY=",
+        "__NEXT_PREVIEW_MODE_ID": "7d968fab7aac3303c0b4b3cce8b1059b",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "3b018f2937c1c126deb982b1ea8e9ec20a0d76f3f92192fd68a0584e0de66076",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "3beb42300ea61541a391c4669c6e17267b89badd492548326a7e15e510edca70"
+      }
+    },
+    "/blog/edit/[id]/page": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/blog/edit/[id]/page_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/edge-chunks/273.js",
+        "server/edge-chunks/623.js",
+        "server/app/blog/edit/[id]/page.js"
+      ],
+      "name": "app/blog/edit/[id]/page",
+      "page": "/blog/edit/[id]/page",
+      "matchers": [
+        {
+          "regexp": "^/blog/edit/(?<id>[^/]+?)$",
+          "originalSource": "/blog/edit/[id]"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "env": {
+        "__NEXT_BUILD_ID": "VunCKU_RFv0Xye3qAaThh",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "yOkb+AKoINzZqI4Dfl3wB3/Bf+tfwQBdsCxLZyi9KgY=",
+        "__NEXT_PREVIEW_MODE_ID": "7d968fab7aac3303c0b4b3cce8b1059b",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "3b018f2937c1c126deb982b1ea8e9ec20a0d76f3f92192fd68a0584e0de66076",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "3beb42300ea61541a391c4669c6e17267b89badd492548326a7e15e510edca70"
+      }
+    }
+  },
+  "sortedMiddleware": []
+}
