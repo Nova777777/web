@@ -31,6 +31,6 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: cloudflare-multifunction-app
+          projectName: web
           directory: .vercel/output/static
           branch: main
